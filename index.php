@@ -10,7 +10,7 @@ include("conecta.php");
 </head>
 <b>
     <h1>Página Inicial do Crud</h1><br>
-    <a href="cadastrar.php">Cadastrar</a><br>
+    <a href="formcad.html">Cadastrar</a><br>
     <a href="alterar.php">Alterar</a><br>
     <a href="listar.php">Listar</a><br>
     <a href="excluir.php">Excluir</a><br>

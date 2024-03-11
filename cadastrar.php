@@ -9,6 +9,8 @@ $quantidade = $_POST['quantidade'];
 
 
 //comando sql.
+$sql = "INSERT INTO produto (nome, quantidade)
+        VALUES ('$nome', $quantidade)";
 $sql = "INSERT INTO produto ( nome, quantidade)
         VALUES ($nome, $quantidade)";
  

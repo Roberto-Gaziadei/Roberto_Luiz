@@ -3,7 +3,7 @@
 include("conecta.php");
 
 // Seleciona todos os dados da tabela historia
-$sql = "SELECT * FROM historia";
+$sql = "SELECT * FROM robertoluiz";
 
 // Executa o Select
 $resultado = mysqli_query($conexao,$sql);
