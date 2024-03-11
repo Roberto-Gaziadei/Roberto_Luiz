@@ -3,8 +3,8 @@
 $bdServidor = "localhost";
 $bdUsuario = "root";
 $bdSenha = "";
-$bdBando = "ppi";
+$bdBanco = "robertoluiz";
 
-$conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBando);
+$conexao = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
 
 ?>
