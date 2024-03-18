@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 11-Mar-2024 às 19:40
+-- Tempo de geração: 18-Mar-2024 às 19:20
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.0.26
 
@@ -34,6 +34,13 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `quantidade` int DEFAULT NULL,
   PRIMARY KEY (`id_produto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id_produto`, `nome`, `quantidade`) VALUES
+(0, 'X salada', 5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
