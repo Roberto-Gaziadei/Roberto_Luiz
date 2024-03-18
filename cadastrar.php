@@ -3,16 +3,15 @@
 //conectar ao banco de dados.
 include("conecta.php");
 
-
+//receber os dados do formulário.
+$matricula = $_POST['matricula'];
 $nome = $_POST['nome'];
-$quantidade = $_POST['quantidade'];
 
 
 //comando sql.
-$sql = "INSERT INTO produto (nome, quantidade)
-        VALUES ('$nome', $quantidade)";
-$sql = "INSERT INTO produto ( nome, quantidade)
-        VALUES ($nome, $quantidade)";
+$sql = "INSERT INTO chamada (matricula, nome) VALUES ($matricula, '$nome')";
+
+header("location: listar.php");
  
 //executar o comando sql.
 mysqli_query($conexao, $sql);

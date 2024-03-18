@@ -6,7 +6,10 @@ include("conecta.php");
 // receber os dados do formulário
 $id = $_GET['id'];
 
-$sql = "DELETE FROM historia WHERE id_historia=$id";
+$sql = "DELETE FROM chamada WHERE id = $id";
 
 // executa o comando no BD
 mysqli_query($conexao,$sql);
+
+header("location: listar.php");
+?>
