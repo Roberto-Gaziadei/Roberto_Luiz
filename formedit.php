@@ -8,7 +8,7 @@ include("conecta.php");
 
 
 // Seleciona os dados do usuário da tabela
-$sql = "SELECT * FROM chamada";
+$sql = "SELECT * FROM produto";
 
 // Executa o Select
 $resultado = mysqli_query($conexao,$sql);
@@ -25,19 +25,19 @@ $dados = mysqli_fetch_assoc($resultado);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Aluno</title>
+    <title>Editar</title>
     
 </head>
 <body>
 
 <form action="alterar.php" method="get">
 
-    <h2>Editar Aluno</h2>
-    <input type="hidden" name="id" value="<?php echo $dados['id'];?>">
-    Edite a matricula
-    <input  type="number" value="<?php echo $dados['matricula'];?>" name="matricula"/><br><br>
-    Edite o nome
+    <h2>Edite o produto </h2>
+    <input type="hidden" name="id_produto" value="<?php echo $dados['id_produto'];?>">
+    Edite nome 
     <input type="text" value="<?php echo $dados['nome'];?>" name="nome" id="nome"/><br><br>
+    Edite quantidade
+    <input  type="number" value="<?php echo $dados['quantidade'];?>" name="quantidade"/><br><br>
        
 
     <input type="submit" value="Editar"/>

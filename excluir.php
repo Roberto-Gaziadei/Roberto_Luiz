@@ -1,15 +1,7 @@
 <?php
-
-// Conectar ao BD
 include("conecta.php");
-
-// receber os dados do formulário
-$id = $_GET['id'];
-
-$sql = "DELETE FROM chamada WHERE id = $id";
-
-// executa o comando no BD
-mysqli_query($conexao,$sql);
-
-header("location: listar.php");
+$id_produto = $_GET['id_produto'];
+$sql = "DELETE FROM produto WHERE id_produto = $id_produto";
+    mysqli_query($conexao,$sql);
+    header("location: listar.php");
 ?>

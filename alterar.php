@@ -1,28 +1,16 @@
-!
 <?php
-
-// Conectar ao BD
 include("conecta.php");
-
-// receber os dados do formulário
-$id = $_GET['id'];
-$matricula = $_GET['matricula'];
+$id_produto = $_GET['id_produto'];
 $nome = $_GET['nome'];
-
-
-$sql = "UPDATE chamada SET 
-matricula = $matricula, nome = '$nome' WHERE id = $id";
-
-mysqli_query($conexao,$sql);
-
-
-if ($conexao->error) {
+$quantidade = $_GET['quantidade'];
+$sql = "UPDATE produto SET 
+nome = '$nome', quantidade = '$quantidade' WHERE id_produto = $id_produto";
+    mysqli_query($conexao,$sql);
+        if ($conexao->error) {
 
     die("Falha ao editar usuário no sistema:". $conexao->error);
 
-}else {
+        }else {
     header("location: listar.php");
 }
-
-// executa o comando no BD
 ?>
